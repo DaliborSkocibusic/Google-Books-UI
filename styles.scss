@@ -1,0 +1,37 @@
+.result-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    background-color: blue;
+    grid-gap: 10px;
+    padding: 10px;
+}
+
+.result-container > div {
+    background-color: lightblue;
+    text-align: center;
+    padding: 20px;
+    font-size: 30px;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    background-color: red;
+    grid-gap: 10px;
+    padding: 10px;
+}
+
+.form-container > button {
+    display: flex;
+    background-color: green;
+    grid-gap: 10px;
+    padding: 10px;
+    width: 100px;
+    height: 100px;
+}
+
+.button {
+    font-size: 20px;
+    padding:20xp;
+    margin: 20px;
+}
