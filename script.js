@@ -1,4 +1,3 @@
-
 let searchTerms = "Harry Potter";
 // let APIKey = "AIzaSyB_tWPK8L8Uv5EAk7nYYbhflEuE8Gq5JMo";
 const myFetch = `https://www.googleapis.com/books/v1/volumes?q=${searchTerms}`;
@@ -21,13 +20,22 @@ async function fetchUser(url) {
     console.log("Response " + response);
 
     const data = await response.json();
-    console.log("Data " + JSON.stringify(data));
+
+    console.log("Data " + data.items[0]);
+
+    let a = data.items[0];
+    let b = data.items[1].volumeInfo.imageLinks.smallThumbnail;
+
+    console.log(a.volumeInfo);
+
+    // worls
+    //console.log("Data " + JSON.parse(JSON.stringify(data)));
 
     // Tyring this
-    return JSON.stringify(data);
+    return data;
 
     // THis works
-    return JSON.stringify(data);
+    // return JSON.stringify(data);
     // results.then((item) => console.log(item));
     // console.log("Response as json " + results);
     // response.then((item) => {
