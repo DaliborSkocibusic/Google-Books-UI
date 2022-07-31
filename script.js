@@ -13,20 +13,39 @@ const myFetch = `https://www.googleapis.com/books/v1/volumes?q=${searchTerms}`;
 //         console.log("results are " + results);
 //     });
 
-console.log("Myfet is " + myFetch);
-
 async function fetchUser(url) {
     const response = await fetch(url);
     console.log("Response " + response);
 
     const data = await response.json();
 
-    console.log("Data " + data.items[0]);
+    let results = [];
+
+    for (let i = 0; i < 10; i++) {
+        results[i] = data.items[i].volumeInfo;
+    }
 
     let a = data.items[0];
-    let b = data.items[1].volumeInfo.imageLinks.smallThumbnail;
+    let b = data.items[1];
 
-    console.log(a.volumeInfo);
+    let i = 5;
+    // Title
+    document.getElementById("result10").textContent = "Title: " + results[i].title;
+
+    // Authors
+    document.getElementById("result10__author").textContent =
+        "Authors: " + results[i].authors;
+
+    // Description
+    let catDesc = results[i].description.slice(0, 111) + "...";
+    document.getElementById("result10__description").textContent =
+        "Description: " + catDesc //results[i].description;
+
+    // Needs image, author, title and description
+
+    // image
+    document.getElementById("image10").src =
+        results[i].imageLinks.smallThumbnail;
 
     // worls
     //console.log("Data " + JSON.parse(JSON.stringify(data)));

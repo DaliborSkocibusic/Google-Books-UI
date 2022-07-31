@@ -1,6 +1,6 @@
 .result-container {
     display: grid;
-    grid-template-columns: auto auto auto;
+    grid-template-columns: 1fr 1fr 1fr;
     background-color: blue;
     grid-gap: 10px;
     padding: 10px;
@@ -32,6 +32,29 @@
 
 .button {
     font-size: 20px;
-    padding:20xp;
+    padding: 20xp;
     margin: 20px;
+}
+
+#result10 {
+    height: 30vh;
+    width: 30vh;
+    font-size: 1vh;
+
+    &__author {
+        font-size: 1vh;
+    }
+
+    &__description {
+        font-size: 1vh;
+    }
+}
+
+#image {
+    height: auto;
+    width: auto;
+    max-width: 50vw;
+    max-height: 50vh;
+    min-width: 20vw;
+    min-height: 20vh;
 }
