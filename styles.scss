@@ -7,10 +7,10 @@
 }
 
 .result-container > div {
+    height: 42vh;
+    width: 30vw;
     background-color: lightblue;
     text-align: center;
-    padding: 20px;
-    font-size: 30px;
 }
 
 .form-container {
@@ -36,25 +36,28 @@
     margin: 20px;
 }
 
-#result10 {
-    height: 30vh;
-    width: 30vh;
-    font-size: 1vh;
+.result {
+
+    &__title {
+        font-size: 2vh;
+    }
 
     &__author {
-        font-size: 1vh;
+        font-size: 1.5vh;
     }
 
     &__description {
         font-size: 1vh;
+        padding: 0px;
+        margin: 0px;
     }
 }
 
-#image {
+.image {
     height: auto;
     width: auto;
+    max-height: 90vh;
     max-width: 50vw;
-    max-height: 50vh;
-    min-width: 20vw;
-    min-height: 20vh;
+    margin: 2vh;
 }
+
