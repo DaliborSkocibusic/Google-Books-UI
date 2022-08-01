@@ -1,16 +1,40 @@
 .result-container {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
   background-color: blue;
   grid-gap: 10px;
   padding: 10px;
 }
+@media only screen and (max-width: 576px) {
+  .result-container {
+    grid-template-columns: 1fr;
+  }
+}
+@media only screen and (min-width: 577px) and (max-width: 768px) {
+  .result-container {
+    grid-template-columns: 1fr;
+  }
+}
+@media only screen and (min-width: 769px) and (max-width: 992px) {
+  .result-container {
+    grid-template-columns: 1fr;
+  }
+}
+@media only screen and (min-width: 993px) and (max-width: 1200px) {
+  .result-container {
+    grid-template-columns: 1fr;
+  }
+}
+@media only screen and (min-width: 1201px) {
+  .result-container {
+    grid-template-columns: 1fr;
+  }
+}
 
 .result-container > div {
+  height: 42vh;
+  width: 30vw;
   background-color: lightblue;
   text-align: center;
-  padding: 20px;
-  font-size: 30px;
 }
 
 .form-container {
@@ -36,22 +60,22 @@
   margin: 20px;
 }
 
-#result10 {
-  height: 30vh;
-  width: 30vh;
-  font-size: 1vh;
+.result__title {
+  font-size: 2vh;
 }
-#result10__author {
-  font-size: 1vh;
+.result__author {
+  font-size: 1.5vh;
 }
-#result10__description {
+.result__description {
   font-size: 1vh;
+  padding: 0px;
+  margin: 0px;
 }
 
-#image10 {
+.image {
   height: auto;
   width: auto;
-  max-height: 50vh;
-  min-height: 10vh;
-  border-radius: 50;
+  max-height: 90vh;
+  max-width: 50vw;
+  margin: 2vh;
 }

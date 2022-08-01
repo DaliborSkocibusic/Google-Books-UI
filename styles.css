@@ -1,16 +1,68 @@
 .result-container {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
   background-color: blue;
   grid-gap: 10px;
   padding: 10px;
 }
+@media only screen and (max-width: 576px) {
+  .result-container {
+    grid-template-columns: 1fr;
+  }
+}
+@media only screen and (min-width: 577px) and (max-width: 768px) {
+  .result-container {
+    grid-template-columns: 1fr;
+  }
+}
+@media only screen and (min-width: 769px) and (max-width: 992px) {
+  .result-container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media only screen and (min-width: 993px) and (max-width: 1200px) {
+  .result-container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media only screen and (min-width: 1201px) {
+  .result-container {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
 
 .result-container > div {
-  height: 42vh;
-  width: 30vw;
   background-color: lightblue;
   text-align: center;
+}
+@media only screen and (max-width: 576px) {
+  .result-container > div {
+    height: 50vh;
+    width: 80vw;
+  }
+}
+@media only screen and (min-width: 577px) and (max-width: 768px) {
+  .result-container > div {
+    height: 50vh;
+    width: 80vw;
+  }
+}
+@media only screen and (min-width: 769px) and (max-width: 992px) {
+  .result-container > div {
+    height: 40vh;
+    width: 40vw;
+  }
+}
+@media only screen and (min-width: 993px) and (max-width: 1200px) {
+  .result-container > div {
+    height: 40vh;
+    width: 40vw;
+  }
+}
+@media only screen and (min-width: 1201px) {
+  .result-container > div {
+    height: 50vh;
+    width: 30vw;
+  }
 }
 
 .form-container {
@@ -51,7 +103,35 @@
 .image {
   height: auto;
   width: auto;
-  max-height: 90vh;
-  max-width: 50vw;
   margin: 2vh;
+}
+@media only screen and (max-width: 576px) {
+  .image {
+    max-height: 30vh;
+    max-width: 20vw;
+  }
+}
+@media only screen and (min-width: 577px) and (max-width: 768px) {
+  .image {
+    max-height: 30vh;
+    max-width: 20vw;
+  }
+}
+@media only screen and (min-width: 769px) and (max-width: 992px) {
+  .image {
+    max-height: 20vh;
+    max-width: 20vw;
+  }
+}
+@media only screen and (min-width: 993px) and (max-width: 1200px) {
+  .image {
+    max-height: 30vh;
+    max-width: 20vw;
+  }
+}
+@media only screen and (min-width: 1201px) {
+  .image {
+    max-height: 30vh;
+    max-width: 20vw;
+  }
 }

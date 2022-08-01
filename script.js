@@ -1,17 +1,9 @@
+
+
 let searchTerms = "";
-// let APIKey = "AIzaSyB_tWPK8L8Uv5EAk7nYYbhflEuE8Gq5JMo";
 let myFetch = `https://www.googleapis.com/books/v1/volumes?q=${searchTerms}`;
 
 // https://www.googleapis.com/books/v1/volumes?q=Harry%20Potter
-
-// fetchUser(myFetch)
-//     .then((response) => response.json())
-//     .then((data) => {
-//         const results = data;
-//         // const { title, first, last } = results[0].name;
-//         // document.querySelector("h2").innerText = `${title} ${first} ${last}`;
-//         console.log("results are " + results);
-//     });
 
 const updateDOM = (i, bookInfo) => {
     let idString = "";
@@ -73,7 +65,7 @@ const updateDOM = (i, bookInfo) => {
     updateDesc(bookInfo.description, idStringDescription);
 
     // image
-    updateImage(bookInfo.imageLinks.smallThumbnail, imageString);
+    updateImage(bookInfo.imageLinks, imageString);
 };
 
 const updateTitle = (title) => {
@@ -103,7 +95,11 @@ const updateDesc = (desc, idStringDescription) => {
 
 const updateImage = (image, imageString) => {
     if (image) {
-        document.getElementById(imageString).src = image;
+        if (image.smallThumbnail) {
+            document.getElementById(imageString).src = image.smallThumbnail;
+        }
+    } else {
+        document.getElementById(imageString).src = "./no-image.png";
     }
 };
 
