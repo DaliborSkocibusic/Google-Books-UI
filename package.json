@@ -1,0 +1,19 @@
+{
+  "name": "google-books-ui",
+  "version": "1.0.0",
+  "description": "<div id=\"top\"></div>",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DaliborSkocibusic/Google-Books-UI.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DaliborSkocibusic/Google-Books-UI/issues"
+  },
+  "homepage": "https://github.com/DaliborSkocibusic/Google-Books-UI#readme"
+}

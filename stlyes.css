@@ -70,36 +70,31 @@
 
 .form-container {
   display: flex;
-  text-align: center;
   flex-direction: column;
   background-color: grey;
-  grid-gap: 1vh;
-  padding: 1vh;
-  font-size: 3vh;
-  height: 13vh;
-  color: black;
-}
-
-input {
-  width: 20vw;
-}
-
-h3 {
-  font-size: 1.5vh;
+  grid-gap: 10vh;
+  padding: 10vh;
 }
 
 .form-container > button {
   display: flex;
   background-color: green;
-  grid-gap: 1vh;
-  padding: 1vh;
-  width: 1vw;
-  height: 10vw;
+  grid-gap: 10px;
+  padding: 10px;
+  width: 100px;
+  height: 100px;
 }
 
 .button {
-  font-size: 20vh;
-  width: 200vw;
+  font-size: 20px;
+  padding: 20px;
+  margin: 20px;
+}
+
+h2 {
+  text-align: center;
+  margin: 5vh;
+  margin-bottom: 10vh;
 }
 
 .result {
