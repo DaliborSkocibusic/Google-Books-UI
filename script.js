@@ -1,5 +1,3 @@
-
-
 let searchTerms = "";
 let myFetch = `https://www.googleapis.com/books/v1/volumes?q=${searchTerms}`;
 
@@ -103,9 +101,10 @@ const updateImage = (image, imageString) => {
     }
 };
 
-const clearDOM = () => {
-    // document.getElementsByClassName("result").value = 0;
-};
+// const clearDOM = () => {
+//     const element = document.getElementsByClassName("result");
+
+// };
 
 async function fetchUser(url) {
     const response = await fetch(url);
@@ -122,7 +121,7 @@ async function fetchUser(url) {
                 }
             }
         }
-    } else clearDOM();
+    } //else clearDOM();
     return results;
 }
 
@@ -135,11 +134,13 @@ document.querySelector("button").addEventListener("click", () => {
     if (searchTerms) {
         repval = fetchUser(myFetch);
     } else {
+        //clearDOM();
         alert("Please enter some search terms");
     }
 });
 
 // Adding modal feature
-// document.getElementById("result0").addEventListener("click", () => {
-//     event.preventDefault();
-// });
+document.getElementById("image0").addEventListener("click", () => {
+    event.preventDefault();
+    console.log("Clicked image");
+});
