@@ -49,3 +49,6 @@ document.querySelector("button").addEventListener("click", () => {
 //     let modal = document.getElementById("clickRange0");
 //     alert(then);
 // });
+
+// Explain to user that only top 9 results are shown.
+// Communicate limitations to user.
